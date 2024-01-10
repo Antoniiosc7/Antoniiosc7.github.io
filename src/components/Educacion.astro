@@ -1,0 +1,33 @@
+---
+import ExperienceItem from "./ExperienceItem.astro"
+const EDUCACION = [
+{
+    date: "2023",
+    title: "C1 Test Certificate English Level",
+    description:
+      "Certificado de C1 de inglés por el British Council.",
+  },
+  {
+    date: "2019 - 2022",
+    title: "Ingenieria Informática - Unviersidad de Sevilla",
+    description:
+      "Grado en Ingeniería Informatica - Tecnologías Informáticas en la rama de sistemas de información.",
+  },
+  {
+    date: "2017 - 2019",
+    title: "Bachillerato Científico-Tecnológico ",
+    description:
+      "Bachillerato Científico-Tecnológico en el IES Sofia de Jerez de la Frontera.",
+  },
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EDUCACION.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>

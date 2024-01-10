@@ -1,0 +1,39 @@
+---
+import NextJS from "./icons/NextJS.astro"
+import Tailwind from "./icons/Tailwind.astro"
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+}
+const ABOUT = [
+  {
+    description: "👋 ¡Hola! Soy Antonio Saborido Campos, tengo 23 años y me considero un apasionado de la Informática, estoy comenzando en el ámbito laboral con mis practicas como Desarrollador Full Stack en Babel.",
+    description2: "🎓 Mi formación académica en Ingeniería Informática en la Universidad de Sevilla me ha proporcionado una base sólida en la resolución de problemas, la programación y la gestión de proyectos.\n\nTambién durante mi formación he tenido la oportunidad de aprender tecnologías como Python, Node, PowerBI, Java, JavaScript, HTML, Docker, CSS y Haskell entre otras.\n\n",
+    description3: "💼 Actualmente, formo parte del equipo de Babel como Desarrollador Full Stack en practicas, donde he tenido la oportunidad de aplicar mis conocimientos en tecnologías como Angular CLI en el desarrollo de aplicaciones web tanto en el front end como en back end con Spring Tools.\n\n",
+    description4: "💪 Mi determinación y entusiasmo por aprender y crecer en el campo de la informática me impulsan constantemente a buscar nuevas oportunidades."
+  },
+]
+---
+
+{
+  ABOUT.map(({ description, description2, description3, description4}) => (
+    <article>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <br>
+      <p class="text-lg mb-4 text-pretty">{description2}</p>
+      <br>
+      <p class="text-lg mb-4 text-pretty">{description3}</p>
+      <br>
+      <p class="text-lg mb-4 text-pretty">{description4}</p>
+    </article>
+  ))
+}
