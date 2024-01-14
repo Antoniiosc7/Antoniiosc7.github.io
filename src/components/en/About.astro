@@ -1,0 +1,39 @@
+---
+import NextJS from "../icons/NextJS.astro"
+import Tailwind from "../icons/Tailwind.astro"
+
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+}
+const ABOUT = [
+  {
+    description: "👋 Hello! I'm Antonio Saborido Campos, 23 years old, and I consider myself passionate about Computer Science. I'm starting my professional journey with an internship as a Full Stack Developer at Babel.",
+    description2: "🎓 My academic background in Computer Engineering at the University of Seville has provided me with a solid foundation in problem-solving, programming, and project management.\n\nDuring my studies, I've had the opportunity to learn technologies such as Python, Node, PowerBI, Java, JavaScript, HTML, Docker, CSS, and Haskell, among others.\n\n",
+    description3: "💼 Currently, I am part of the Babel team as an intern Full Stack Developer, where I've had the opportunity to apply my knowledge in technologies like Angular CLI for web application development, both on the front end and back end using Spring Tools.\n\n",
+    description4: "💪 My determination and enthusiasm for learning and growing in the field of computer science constantly drive me to seek new opportunities.",
+  },
+]
+---
+
+{
+  ABOUT.map(({ description, description2, description3, description4}) => (
+    <article>
+      <p class="text-lg mb-4 text-pretty">{description}</p>
+      <br>
+      <p class="text-lg mb-4 text-pretty">{description2}</p>
+      <br>
+      <p class="text-lg mb-4 text-pretty">{description3}</p>
+      <br>
+      <p class="text-lg mb-4 text-pretty">{description4}</p>
+    </article>
+  ))
+}

@@ -1,0 +1,37 @@
+---
+import ExperienceItem from "../ExperienceItem.astro"
+
+import NextJS from "../icons/NextJS.astro"
+import Tailwind from "../icons/Tailwind.astro"
+const TAGS = {
+  NEXT: {
+    name: "Next.js",
+    class: "bg-black text-white",
+    icon: NextJS,
+  },
+  TAILWIND: {
+    name: "Tailwind CSS",
+    class: "bg-[#003159] text-white",
+    icon: Tailwind,
+  },
+}
+const EXPERIENCIE = [
+  {
+    date: "October 2023 - Present...",
+    title: "Full Stack Developer",
+    description:
+      "Babel · Internship contract.",
+    tags: [TAGS.NEXT, TAGS.TAILWIND],
+  },
+]
+---
+
+<ol class="relative border-s border-gray-200 ml-3">
+  {
+    EXPERIENCIE.map((experiencie) => (
+      <li class="mb-10 ms-4">
+        <ExperienceItem {...experiencie} />
+      </li>
+    ))
+  }
+</ol>
