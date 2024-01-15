@@ -11,6 +11,7 @@ import Repository from '../icons/Repository.astro';
 import Sun from '../icons/Sun.astro';
 import Moon from '../icons/Moon.astro';
 import Javascript from '../icons/Javascript.astro';
+import Linkedin from '../icons/Github.astro';
 
 const { name } = Astro.props;
 ---
@@ -31,6 +32,8 @@ const { name } = Astro.props;
           return <Youtube {...Astro.props} />;
         case "github":
           return <Github {...Astro.props} />;
+        case "linkedin":
+          return <Linkedin {...Astro.props} />;
         case "css":
           return <CSS {...Astro.props} />;
         case "typescript":
