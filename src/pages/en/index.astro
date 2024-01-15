@@ -1,5 +1,5 @@
 ---
-import Layout from "../../layouts/Layout.astro"
+import Layout from "../../layouts/LayoutEN.astro"
 import Badge from "../../components/Badge.astro"
 import SectionContainer from "../../components/SectionContainer.astro"
 import LinkedInIcon from "../../components/icons/LinkedIn.astro"
@@ -9,7 +9,7 @@ import MailIcon from "../../components/icons/Mail.astro"
 import Experience from "../../components/en/Experience.astro"
 import Briefcase from "../../components/icons/Briefcase.astro"
 import CodeIcon from "../../components/icons/Code.astro"
-import Projects from "../../components/Projects.astro"
+import Projects from "../../components/en/Projects.astro"
 import Educacion from "../../components/en/Educacion.astro"
 import About from "../../components/en/About.astro"
 ---
@@ -91,16 +91,15 @@ import About from "../../components/en/About.astro"
       </h2>
       <Experience />
     </SectionContainer>
-<!--
-    <SectionContainer id="proyectos">
+    <SectionContainer id="projects">
       <h2
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
       >
-        <CodeIcon class="size-7" />
-         Projects
+        <Briefcase class="size-7" />
+        Projects
       </h2>
       <Projects />
     </SectionContainer>
-  -->
+    
   </main>
 </Layout>

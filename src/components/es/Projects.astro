@@ -1,0 +1,55 @@
+---
+import Icons from "../Icons/index.astro";
+import { SOCIAL_LINKS, FEATURED_REPOSITORIES } from "../../constsES";
+---
+
+<section>
+
+  <div
+    class="flex justify-between lg:gap-x-7 flex-col-reverse lg:flex-row items-start"
+  >
+    <div
+      class="grid grid-cols-2 sm:grid-cols-4 gap-7 mb-8 "
+    >
+      {
+        FEATURED_REPOSITORIES.map((repository) => (
+          <a
+            href={repository.url}
+            target="_blank"
+            class="border dark:border-gray-500 border-gray-300 hover:border-gray-400 dark:hover:border-gray-400 p-4 rounded-xl col-span-2 transition ease-in-out duration-300 "
+          >
+            <div class="flex items-center gap-3">
+              <Icons
+                name="repository"
+                class="fill-gray-900 dark:fill-gray-400"
+              />
+              <h6 class="font-semibold text-lg sm:text-xl mb-0 text-gray-800 dark:text-white">
+                {repository.name}
+              </h6>
+            </div>
+            <p class="text-gray-500 dark:text-gray-400 text-base sm:text-xl my-4">
+              {repository.description}
+            </p>
+            <div class="flex items-center">
+              <Icons name={repository.language} class="w-7 h-7" />
+            </div>
+          </a>
+        ))
+      }
+    </div>
+    <ul class="squares dark:after:bg--900 after:bg-white w-full lg:w-16">
+      {
+        [...Array(200)].map(() => (
+          <li style={{ animationDelay: `${Math.random()}s` }} />
+        ))
+      }
+    </ul>
+  </div>
+  <a
+    href={SOCIAL_LINKS.find((el) => el.name === "github")?.url}
+    target="_blank"
+    class="block sm:hidden text-lg font-medium text-blue-600 dark:text-blue-500 px-4 py-2 bg-white-100 hover:bg-white-200 dark:bg-white-800 dark:hover:bg-white-700 cursor-pointer rounded-lg transition ease-in-out duration-300 text-center"
+  >
+    See all projects
+  </a>
+</section>

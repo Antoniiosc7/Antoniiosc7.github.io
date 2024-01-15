@@ -1,3 +1,6 @@
+---
+import ThemeControl from "../ThemeControl.astro";
+---
 <header
   class={`
     flex justify-center items-center
@@ -27,10 +30,23 @@
       class="hover:bg-white/10 rounded-full px-3 transition"
       href="#experiencia">Experience</a
     >
-    <a class="hover:bg-white/10 rounded-full px-3 transition" href="#proyectos"
+    <a class="hover:bg-white/10 rounded-full px-3 transition" href="#projects"
       >Projects</a
     >
- 
-
+    <select id="lang" class="hover:bg-black/10 rounded-full px-3 transition bg-black text-white" onchange="location = this.value;">
+      <option value="https://cv.antoniosaborido.es/en/">EN</option>
+      <option value="https://cv.antoniosaborido.es/es/">ES</option>
+    </select>
+    <ThemeControl />
   </nav>
 </header>
+
+<script>
+  // Cambiar el color de fondo de las opciones del menú desplegable cuando se hace clic en él
+  const langElement = document.getElementById('lang');
+  if (langElement) {
+    langElement.addEventListener('click', function() {
+      this.style.backgroundColor = 'black';
+    });
+  }
+</script>
