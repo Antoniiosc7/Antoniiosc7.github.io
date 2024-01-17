@@ -12,6 +12,10 @@ import CodeIcon from "../../components/icons/Code.astro"
 import Projects from "../../components/es/Projects.astro"
 import Educacion from "../../components/es/Educacion.astro"
 import About from "../../components/es/About.astro"
+import Person from "../../components/icons/person.astro"
+import Studies from "../../components/icons/studies.astro"
+import Curriculum from "../../components/icons/curriculum.astro"
+
 ---
 
 <Layout
@@ -47,25 +51,31 @@ import About from "../../components/es/About.astro"
       </h2>
 
       <nav class="flex gap-4 mt-8 flex-wrap">
-        <SocialPill href="https://www.linkedin.com/in/antonio-saborido-campos-512343204/">
+        <SocialPill href="https://www.linkedin.com/in/antonio-saborido-campos-512343204/" class="flex-1 max-w-[calc(33%-1rem)]">
           <LinkedInIcon class="size-4 md:size-6" />
-           LinkedIn
+          LinkedIn
         </SocialPill>
-        <SocialPill href="https://github.com/antoniiosc7">
+        <SocialPill href="https://github.com/antoniiosc7" class="flex-1 max-w-[calc(33%-1rem)]">
           <GitHubIcon class="size-4 md:size-6" />
-           GitHub
+          GitHub
         </SocialPill>
-        <SocialPill href="mailto:antonio.saborido01@gmail.com">
+        <SocialPill href="mailto:antonio.saborido01@gmail.com" class="flex-1 max-w-[calc(33%-1rem)]">
           <MailIcon class="size-4 md:size-6" />
-           antonio.saborido01@gmail.com
+          antonio.saborido01@gmail.com
         </SocialPill>
+        <SocialPill href="/resumeES.pdf" class="flex-1 max-w-[calc(33%-1rem)]">
+          <Curriculum class="size-4 md:size-6" />
+          Descargar CV
+        </SocialPill>
+      </nav>
+      
       </nav>
     </SectionContainer>
     <SectionContainer id="about">
       <h2
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
       >
-        <Briefcase class="size-7" />
+        <Person class="size-7" />
          Sobre mí
       </h2>
       <About />
@@ -75,7 +85,7 @@ import About from "../../components/es/About.astro"
       <h2
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
       >
-        <Briefcase class="size-7" />
+        <Studies class="size-7" />
          Educación
       </h2>
       <Educacion />
@@ -94,7 +104,7 @@ import About from "../../components/es/About.astro"
       <h2
         class="text-3xl font-semibold mb-6 flex gap-x-3 items-center text-black/80 dark:text-white/80"
       >
-        <Briefcase class="size-7" />
+        <GitHubIcon class="size-7" />
         Proyectos
       </h2>
       <Projects />
