@@ -14,23 +14,23 @@ export const FEATURED_REPOSITORIES = [
     },
     {
       id: 1,
-      name: 'Twitch Clips',
-      url: 'https://github.com/Antoniiosc7/TwitchClips',
-      description: 'Integration of the Twitch API into a Svelte page that allows viewing the most popular clips from League of Legends streamers.',
-      language: 'svelte',
-    },
-    {
-      id: 2,
       name: 'Jersey Detection',
       url: 'https://github.com/Antoniiosc7/JerseyDetection',
       description: 'Text detection in images, primarily based on football jerseys to identify the player.',
       language: 'python',
     },
     {
+      id: 2,
+      name: 'Twitch Clips',
+      url: 'https://github.com/Antoniiosc7/TwitchClips',
+      description: 'Integration of the Twitch API into a Svelte page that allows viewing the most popular clips from League of Legends streamers.',
+      language: 'svelte',
+    },
+    {
       id: 3,
       name: 'Api Tennis',
       url: 'https://github.com/Antoniiosc7/TFG-Server',
       description: 'This repository creates an API using Javascript and Expressjs for tennis statistics.',
-      language: 'javascript',
+      language: 'javascript2',
     },
 ]
